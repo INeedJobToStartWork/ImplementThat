@@ -9,6 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "commitsmile": "^0.6.1",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },

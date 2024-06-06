@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      commitsmile:
+        specifier: ^0.6.1
+        version: 0.6.1
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -16,6 +19,17 @@ importers:
         version: 1.13.3
 
 packages:
+
+  /commitsmile@0.6.1:
+    resolution: {integrity: sha512-UkXlPtGzGr/1Fe+UgwTK9YDVU0GJtTGv9Gjhr2ZPMypg3LmjgzDbUxZx1jV6P4cNh83/CgwKi/RJb7AM7UKHww==}
+    engines: {node: '>=18'}
+    hasBin: true
+    dev: true
+    bundledDependencies:
+      - '@clack/prompts'
+      - commander
+      - jiti
+      - zod
 
   /prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
