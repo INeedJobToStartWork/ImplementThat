@@ -1,13 +1,21 @@
 {
-  "name": "implementthis",
+  "name": "implementthat",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "turbo build",
     "dev": "turbo dev",
+    "build": "turbo build",
+    "build:npm": "turbo build:npm",
+    "start": "turbo start",
     "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
     "format": "turbo format",
-    "menu": ""
+    "clean": "turbo clean",
+    "preinstall": "husky init",
+    "pre:husky": "git add . && lint-staged",
+    "prepare": "husky",
+    "menu": "",
+    "test": "echo \"Error: no test specified\""
   },
   "devDependencies": {
     "commitsmile": "^0.6.1",
@@ -17,5 +25,9 @@
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7"
   }
 }
