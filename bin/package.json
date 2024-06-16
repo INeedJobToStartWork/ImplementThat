@@ -1,13 +1,47 @@
 {
-  "name": "bin",
-  "version": "1.0.0",
-  "private": "true",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "ineedjobtostartwork",
-  "license": "ISC"
+	"name": "menu",
+	"version": "0.0.0",
+	"private": "true",
+	"description": "menu",
+	"keywords": [],
+	"license": "ISC",
+	"author": "ineedjobtostartwork",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "pnpm tsup --config ./config/tsuprc/tsup.prod.ts",
+		"dev": "pnpm tsup --config ./config/tsuprc/tsup.dev.ts",
+		"format": "pnpm prettier . --write && pnpm prettier . --check",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	},
+	"lint-staged": {
+		"*": [
+			"pnpm format --",
+			"pnpm lint:fix --",
+			"pnpm lint --"
+		]
+	},
+	"dependencies": {
+		"@clack/prompts": "^0.7.0",
+		"chalk": "^5.3.0",
+		"commander": "^11.1.0",
+		"oh-my-error": "^1.0.0",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"clean-package": "^2.2.0",
+		"esbuild": "^0.21.5",
+		"esbuild-plugin-copy": "^2.1.1",
+		"eslintrc": "workspace:*",
+		"prettier": "^3.1.1",
+		"prettierrc": "workspace:*",
+		"tsconfig": "workspace:*",
+		"tsup": "^8.1.0",
+		"typescript": "^5.3.3"
+	},
+	"packageManager": "pnpm@8.9.0",
+	"engines": {
+		"node": ">=18"
+	}
 }
