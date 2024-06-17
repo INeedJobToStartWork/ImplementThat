@@ -1,4 +1,6 @@
 packages:
-  - "example/**/**"
+  - "templates/**/**"
+  - "examples/**/**"
+  - "workspace/**/**"
   - "bin"
   - "configs/**"
